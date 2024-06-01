@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>研究资源 - 校园辅助系统</title>
+    <style>
+        body {
+            background: url('sun.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: black;
+            position: relative;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.85);
+            z-index: 0;
+            backdrop-filter: blur(5px);
+        }
+        h1 {
+            font-size: 48px;
+            color: darkred;
+            animation: glow 1.5s infinite alternate;
+            position: relative;
+            z-index: 1;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .container {
+            position: relative;
+            z-index: 1;
+            width: 80%;
+            max-width: 800px;
+            background: #ffcccb;
+            border: 2px solid black;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            margin-bottom: 20px;
+        }
+        .resource-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .resource-list li {
+            margin: 10px 0;
+            padding: 10px;
+            background: white;
+            border-radius: 5px;
+            border: 1px solid darkred;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+        .resource-list li:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        }
+        .resource-list li h2 {
+            margin: 0;
+            font-size: 24px;
+            color: darkred;
+        }
+        .resource-list li p {
+            margin: 5px 0;
+            color: black;
+        }
+        .flames {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 150px;
+            overflow: hidden;
+            z-index: 1;
+        }
+        .flame {
+            position: absolute;
+            bottom: 0;
+            width: 20px;
+            height: 60px;
+            background: rgba(255, 69, 0, 0.6);
+            border-radius: 50%;
+            animation: flicker 1.5s infinite;
+        }
+        .flame:nth-child(1) {
+            left: 10%;
+            animation-delay: 0s;
+        }
+        .flame:nth-child(2) {
+            left: 20%;
+            animation-delay: 0.2s;
+        }
+        .flame:nth-child(3) {
+            left: 30%;
+            animation-delay: 0.4s;
+        }
+        .flame:nth-child(4) {
+            left: 40%;
+            animation-delay: 0.6s;
+        }
+        .flame:nth-child(5) {
+            left: 50%;
+            animation-delay: 0.8s;
+        }
+        .flame:nth-child(6) {
+            left: 60%;
+            animation-delay: 1s;
+        }
+        .flame:nth-child(7) {
+            left: 70%;
+            animation-delay: 1.2s;
+        }
+        .flame:nth-child(8) {
+            left: 80%;
+            animation-delay: 1.4s;
+        }
+        .flame:nth-child(9) {
+            left: 90%;
+            animation-delay: 1.6s;
+        }
+        @keyframes flicker {
+            0%, 100% {
+                transform: scaleY(1) scaleX(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scaleY(1.5) scaleX(0.8);
+                opacity: 0.6;
+            }
+        }
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px rgba(255, 0, 0, 0.5), 0 0 20px rgba(255, 0, 0, 0.5), 0 0 30px rgba(255, 0, 0, 0.5);
+            }
+            to {
+                text-shadow: 0 0 20px rgba(255, 0, 0, 0.7), 0 0 30px rgba(255, 0, 0, 0.7), 0 0 40px rgba(255, 0, 0, 0.7);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>研究资源</h1>
+    <div class="container">
+        <ul class="resource-list">
+            <li>
+                <h2>科研项目申请</h2>
+                <p>提交和管理科研项目的申请。</p>
+            </li>
+            <li>
+                <h2>实验室资源预定</h2>
+                <p>预定实验室和科研设备。</p>
+            </li>
+            <li>
+                <h2>科研成果发布</h2>
+                <p>发布和分享科研成果。</p>
+            </li>
+        </ul>
+    </div>
+    <div class="flames">
+        <div class="flame"></div>
+        <div class="flame"></div>
+        <div class="flame"></div>
+        <div class="flame"></div>
+        <div class="flame"></div>
+        <div class="flame"></div>
+        <div class="flame"></div>
+        <div class="flame"></div>
+        <div class="flame"></div>
+    </div>
+</body>
+</html>
